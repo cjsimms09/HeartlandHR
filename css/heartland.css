@@ -1,0 +1,86 @@
+
+:root {
+  --heartland-dark-green: #007f00;
+  --heartland-light-green: #66cc00;
+  --heartland-orange: #ff8000;
+  --heartland-yellow: #ffcc00;
+  --heartland-grey: #71686b;
+  --heartland-text: #333333;
+  --heartland-border: #e5e5e5;
+  --heartland-bg-light: #fafafa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--heartland-text);
+  line-height: 1.6;
+}
+
+a { color: var(--heartland-dark-green); text-decoration: none; }
+a:hover { color: var(--heartland-orange); text-decoration: underline; }
+
+.navbar-brand img { max-height: 50px; height: auto; }
+
+.btn-primary-hh {
+  background-color: var(--heartland-dark-green);
+  border-color: var(--heartland-dark-green);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+}
+.btn-primary-hh:hover {
+  background-color: #005d00;
+  border-color: #005d00;
+  color: #ffffff;
+}
+
+.btn-outline-hh {
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--heartland-border);
+  color: var(--heartland-text);
+  background-color: #ffffff;
+}
+.btn-outline-hh:hover {
+  border-color: var(--heartland-orange);
+  color: var(--heartland-orange);
+  background-color: #ffffff;
+}
+
+.hero { padding: 3.5rem 0 3rem; }
+@media (min-width: 992px) { .hero { padding: 4.5rem 0 4rem; } }
+.hero-title { font-size: 2.1rem; font-weight: 700; color: #222; margin-bottom: 1rem; }
+@media (min-width: 768px) { .hero-title { font-size: 2.5rem; } }
+.hero-subtitle { font-size: 1rem; color: var(--heartland-grey); max-width: 34rem; }
+.hero-image { max-width: 480px; width: 100%; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,0.08); object-fit: cover; }
+.hero-tagline { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--heartland-grey); font-weight: 600; }
+
+.section { padding: 3rem 0; }
+.section-light { background-color: var(--heartland-bg-light); }
+.section-title { font-size: 1.5rem; font-weight: 600; color: #222; margin-bottom: 0.75rem; }
+.section-subtitle { color: var(--heartland-grey); max-width: 34rem; }
+
+.founder-photo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid var(--heartland-dark-green); }
+.founder-name { font-weight: 600; }
+.founder-role { font-size: 0.9rem; color: var(--heartland-grey); }
+
+.service-card { border-radius: 12px; border: 1px solid var(--heartland-border); padding: 1.5rem 1.4rem; background-color: #fff; height: 100%; }
+.service-name { font-weight: 600; margin-bottom: 0.3rem; color: #222; }
+.service-text { font-size: 0.95rem; }
+
+.cta-strip { border-radius: 16px; border: 1px solid var(--heartland-border); padding: 1.5rem 1.75rem; background-color: #fff; }
+
+.site-footer { border-top: 1px solid var(--heartland-border); padding: 2rem 0 1.5rem; font-size: 0.9rem; color: var(--heartland-grey); }
+.footer-bottom { border-top: 1px solid var(--heartland-border); margin-top: 1.5rem; padding-top: 1rem; font-size: 0.85rem; }
+.footer-heading { font-weight: 600; color: #222; margin-bottom: 0.75rem; }
+
+.form-control, .form-select { border-radius: 8px; border-color: var(--heartland-border); }
+.form-control:focus, .form-select:focus { box-shadow: none; border-color: var(--heartland-dark-green); }
