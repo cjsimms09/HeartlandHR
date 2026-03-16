@@ -76,17 +76,55 @@ a:hover { color: var(--heartland-orange); text-decoration: underline; }
   border: 2px solid var(--heartland-dark-green);
 }
 
-}
-
-@media (min-width: 768px) {
+/* Slightly smaller on very small screens */
+@media (max-width: 575.98px) {
   .founder-photo {
-    width: 160px;
-    height: 160px;
+    width: 180px;
   }
 }
- }
-.founder-name { font-weight: 600; }
-.founder-role { font-size: 0.9rem; color: var(--heartland-grey); }
+
+.founder-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+}
+
+.founder-role {
+  font-size: 0.9rem;
+  color: var(--heartland-grey);
+  margin-bottom: 0.15rem;
+}
+
+.founder-location {
+  font-size: 0.86rem;
+  color: var(--heartland-grey);
+}
+
+/* Text block styling */
+.founder-card-body {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--heartland-border);
+}
+
+@media (min-width: 992px) {
+  .founder-card-body {
+    padding: 2rem 2rem;
+  }
+}
+
+.founder-lede {
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: #222222;
+}
+
+.founder-text {
+  font-size: 0.95rem;
+  color: var(--heartland-text);
+}
+
 
 .service-card { border-radius: 12px; border: 1px solid var(--heartland-border); padding: 1.5rem 1.4rem; background-color: #fff; height: 100%; }
 .service-name { font-weight: 600; margin-bottom: 0.3rem; color: #222; }
