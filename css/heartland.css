@@ -92,6 +92,67 @@ a:hover { color: var(--heartland-orange); text-decoration: underline; }
 .service-name { font-weight: 600; margin-bottom: 0.3rem; color: #222; }
 .service-text { font-size: 0.95rem; }
 
+/* Service cards: subtle design enhancements */
+.service-card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid var(--heartland-border);
+  padding: 1.6rem 1.4rem 1.5rem;
+  background-color: #fff;
+  height: 100%;
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+  border-color: rgba(0, 127, 0, 0.18); /* soft dark-green border */
+}
+
+@media (max-width: 767.98px) {
+  .service-card:hover {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* Icon circle at top of each card */
+.service-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  background: rgba(0, 127, 0, 0.08); /* soft dark-green */
+}
+
+.service-icon-2 {
+  background: rgba(255, 128, 0, 0.08); /* soft orange */
+}
+
+.service-icon-3 {
+  background: rgba(102, 204, 0, 0.08); /* soft light-green */
+}
+
+.service-icon-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--heartland-grey);
+}
+
+/* Tighten text on small screens */
+@media (max-width: 575.98px) {
+  .service-name {
+    font-size: 1rem;
+  }
+
+  .service-text {
+    font-size: 0.93rem;
+  }
+}
+
 .cta-strip { border-radius: 16px; border: 1px solid var(--heartland-border); padding: 1.5rem 1.75rem; background-color: #fff; }
 
 .site-footer { border-top: 1px solid var(--heartland-border); padding: 2rem 0 1.5rem; font-size: 0.9rem; color: var(--heartland-grey); }
