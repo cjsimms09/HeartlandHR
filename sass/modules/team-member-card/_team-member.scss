@@ -1,0 +1,152 @@
+.team-page {
+  padding-top: 104px;
+  padding-bottom: 68px;
+
+  @include sm {
+    padding-top: 67px;
+    padding-bottom: 22px;
+  }
+  @include md {
+    padding-top: 90px;
+    padding-bottom: 48px;
+  }
+}
+.team-member-card {
+  position: relative;
+
+  .image {
+    background-color: $background;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+    transform: scale(1);
+    @include transition;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .image-content-wrapper {
+      padding: 43px 0 44px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      @include transition;
+      visibility: hidden;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .user-info {
+        h4 {
+          margin-bottom: 4px;
+          color: $white;
+          a {
+            &:hover {
+              color: $brand;
+            }
+          }
+          @include sm {
+            font-size: 26px;
+          }
+        }
+        p {
+          text-align: center;
+          color: $white;
+        }
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 27px;
+        width: 100%;
+        a {
+          line-height: 18px;
+          i {
+            color: $white;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    padding: 48px 10px 48px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    position: relative;
+    @include transition;
+    .user-info {
+      h4 {
+        margin-bottom: 4px;
+        @include sm {
+          font-size: 26px;
+        }
+      }
+      p {
+        text-align: center;
+      }
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      width: 100%;
+      a {
+        line-height: 18px;
+        i {
+          color: $icon-color;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .image-content-wrapper {
+    .social {
+      a {
+        i {
+          z-index: 10;
+          position: relative;
+          @include transition;
+          &:hover {
+            color: $brand;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .image {
+      transform: scale(1.03);
+    }
+    .content-wrapper {
+      position: relative;
+      // top: -200px;
+      visibility: hidden;
+      opacity: 0;
+    }
+    .image-content-wrapper {
+      background: rgba(3, 63, 71, 0.8);
+      backdrop-filter: blur(10px);
+      visibility: visible;
+      opacity: 1;
+      z-index: 3;
+    }
+  }
+  @include sm {
+    margin-bottom: 50px;
+  }
+  @include md {
+    margin-bottom: 50px;
+  }
+}

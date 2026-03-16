@@ -1,0 +1,50 @@
+.icon-card {
+    &.style-four {
+        flex-direction: column;
+        padding: 78px 28px;
+        margin-top: 0;
+
+        @include sm {
+            padding: 48px 12px;
+            margin-bottom: 24px;
+        }
+        @include md {
+            padding: 48px 12px;
+            margin-bottom: 24px;
+        }
+        @include lg {
+            padding: 48px 12px;
+            margin-bottom: 24px;
+        }
+
+        .icon {
+            background: $brand;
+            width: 80px;
+            height: 80px;
+            border: none;
+            border: 1px solid transparent;
+            @include transition;
+            i {
+                font-size: 48px;
+                font-weight: 500;
+            }
+            @include sm {
+                align-self: center;
+            }
+        }
+        .content {
+            .desc {
+                font-size: 18px;
+            }
+            .title {
+                font-size: 24px;
+            }
+        }
+        &:hover {
+            .icon {
+                background: $brand !important;
+                border-color: $icon-color;
+            }
+        }
+    }
+}

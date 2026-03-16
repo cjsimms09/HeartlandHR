@@ -1,0 +1,47 @@
+.icon-card {
+    &.style-five {
+        flex-direction: row;
+        align-items: start;
+        padding: 0;
+        justify-content: start;
+        gap: 16px;
+
+        .icon {
+            background: $brand;
+            width: 64px;
+            height: 64px;
+            border: none;
+            i {
+                font-size: 24px;
+                color: #000;
+                @include sm {
+                    font-size: 18px;
+                }
+            }
+            @include sm {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .content {
+            gap: 4px;
+            align-items: flex-start;
+
+            .title {
+                text-align: start;
+            }
+            .desc {
+                text-align: start;
+                padding: 0;
+            }
+        }
+        &:hover {
+            .icon {
+                transform: rotateY(-360deg) !important;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.team-member-card {
+    &.style-two {
+        .image {
+            border-radius: 0 0 500px 500px;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            padding: 24px 0 0 0;
+            .user-info {
+                h4 {
+                    margin-bottom: 8px;
+                    @include lg {
+                        font-size: 28px;
+                        line-height: 32px;
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 31px;
+                }
+            }
+            .social {
+                display: none;
+            }
+        }
+        &:hover {
+            .content-wrapper {
+                background: none;
+                backdrop-filter: blur(0);
+                top: 0;
+
+                .user-info {
+                    h4 {
+                        color: #080f10;
+                    }
+                    p {
+                        color: unset;
+                    }
+                }
+            }
+        }
+    }
+}

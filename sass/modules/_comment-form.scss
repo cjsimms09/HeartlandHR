@@ -1,0 +1,366 @@
+/*Comment Input Filed*/
+
+.post-comments-form {
+  &.style-two {
+    padding: 0;
+    background: transparent;
+  }
+}
+.post-comments-title {
+  .sub-title {
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 170%;
+    color: $white;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $title-color;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    small {
+      font-size: 16px;
+      font-family: $body-font;
+      color: $orange-color;
+
+      &:hover{
+        color: $brand;
+      }
+    }
+  }
+  &.style-two {
+    h5 {
+      color: $title-color;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 0.64px;
+      margin-bottom: 48px;
+      @include sm {
+        margin-bottom: 28px;
+      }
+    }
+  }
+  .sub-title {
+    color: $white;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  h5 {
+    color: $title-color;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    small {
+      font-size: 16px;
+      font-family: $body-font;
+      color: $primary-color;
+    }
+  }
+}
+
+.comment-respond {
+  position: relative;
+
+  .wpcf7-spinner {
+    position: absolute;
+    right: 0;
+  }
+  .theme-btn {
+    &.style-four {
+      justify-content: center;
+      border-color: $brand;
+      background-color: $brand;
+      color: $icon-color;
+      height: 64px;
+      font-size: 18px;
+      @include transition;
+
+      &:hover {
+        border-color: $white;
+        background-color: transparent;
+        color: $white;
+        @include transition;
+      }
+    }
+  }
+  .contacts-email,
+  .contacts-name,
+  .single-input-field,
+  .contacts-message {
+    margin-bottom: 24px;
+  }
+  .single-input-field {
+    .nice-select {
+      color: #c3d1d2;
+      &:after {
+        // color: $white;
+        // border-bottom: 2px solid $white;
+        // border-right: 2px solid $white;
+        // color: #ffffff;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  label {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: $title-color;
+    margin-bottom: 8px;
+  }
+  .checkbox-field-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding: 15px 0;
+
+    .single-checkbox-field {
+      margin-bottom: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: $body-font;
+
+      .form-check-input {
+        margin: 0 !important;
+        width: 18px;
+        height: 18px;
+        padding: 0;
+      }
+    }
+  }
+  .comment-form-cookies-consent {
+    display: none;
+  }
+  .comment-form {
+    .terms-condition-wrapper {
+      .terms-condition {
+        height: 100%;
+        width: auto;
+        display: inline-block;
+        margin-right: 8px;
+      }
+    }
+  }
+  input,
+  select {
+    padding: 0 16px;
+    height: 60px;
+    width: 100%;
+    color: $form-border;
+    border: 1px solid $form-border;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: transparent;
+    font-family: $body-font !important;
+    border-radius: 3px !important;
+  }
+  *::-webkit-input-placeholder {
+    color: $form-border;
+  }
+  *:-moz-placeholder {
+    color: $form-border;
+    opacity: 1;
+  }
+  *::-moz-placeholder {
+    color: $form-border;
+    opacity: 1;
+  }
+  *:-ms-input-placeholder {
+    color: $form-border;
+  }
+  *::-ms-input-placeholder {
+    color: $form-border;
+  }
+  *::placeholder {
+    color: $form-border;
+  }
+  textarea {
+    resize: vertical;
+    padding: 16px;
+    width: 100%;
+    color: $form-border;
+    border: 1px solid $form-border;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: transparent;
+    font-family: $body-font !important;
+    height: 142px;
+    border-radius: 3px !important;
+    &.style-two {
+      color: $title-color !important;
+    }
+    @include lg {
+      height: 90px;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    a{
+      color: $icon-color;
+    }
+  }
+
+  input:focus,
+  textarea:focus,
+  .form-select:focus,
+  .nice-select {
+    outline: none !important;
+    box-shadow: none;
+    border-color: $form-border;
+    transition: all 0.4s ease 0s;
+    color: $form-border;
+  }
+  &.style-two {
+    input {
+      padding: 16px;
+      height: auto;
+      color: $text-gray;
+      border: 1px solid $text-gray;
+      border-radius: 0;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: $body-font !important;
+      line-height: 150%;
+    }
+    ::placeholder {
+      color: $text-gray;
+      opacity: 1; /* Firefox */
+    }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $text-gray;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $text-gray;
+    }
+    textarea {
+      border-color: $text-gray;
+      color: $text-gray !important;
+    }
+    .contacts-checkbox {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .form-check-input:checked {
+      background-color: $icon-color;
+      border-color: $icon-color;
+    }
+  }
+}
+
+.comment-respond {
+  &.style-two {
+    background: transparent;
+    padding: 0;
+
+    label {
+      color: $black;
+    }
+    input[type="submit"] {
+      display: inline-block;
+      width: unset;
+      background-color: $brand;
+      border-color: $brand;
+      padding: 17px 24px;
+      color: $title-color;
+      border-radius: 4px;
+      font-size: 16px;
+      @include transition;
+
+      &:hover {
+        background-color: $title-color;
+        color: $white;
+        border-color: $title-color;
+        @include transition;
+      }
+    }
+    .single-input-field {
+      margin-bottom: 30px;
+
+      input,
+      select {
+        background-color: transparent;
+        border-color: #828282 !important;
+        color: $title-color !important;
+        height: 53px;
+      }
+      .nice-select {
+        color: $title-color;
+      }
+      textarea {
+        border-color: $text-gray;
+        height: 142px;
+        margin-bottom: 40px;
+      }
+      *::-webkit-input-placeholder {
+        color: $text-gray;
+      }
+      *:-moz-placeholder {
+        color: $text-gray;
+        opacity: 1;
+      }
+      *::-moz-placeholder {
+        color: $text-gray;
+        opacity: 1;
+      }
+      *:-ms-input-placeholder {
+        color: $text-gray;
+      }
+      *::-ms-input-placeholder {
+        color: $text-gray;
+      }
+      *::placeholder {
+        color: $text-gray;
+      }
+    }
+    .checkbox-field-wrapper {
+      .single-checkbox-field {
+        .form-check-input {
+          background-color: transparent;
+          border-color: #828282;
+        }
+      }
+    }
+    input:focus,
+    textarea:focus,
+    .form-select:focus,
+    .nice-select {
+      border-color: #828282;
+    }
+  }
+}

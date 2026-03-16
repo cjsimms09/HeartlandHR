@@ -1,0 +1,44 @@
+.image-card {
+    &.style-three {
+        flex-direction: row-reverse;
+        gap: 64px;
+        z-index: 5;
+        position: relative;
+        .content {
+            padding-right: 30px;
+            .title {
+                font-size: 43px;
+                line-height: 52px;
+                @include sm {
+                    font-size: 38px;
+                    br {
+                        display: none;
+                    }
+                }
+                @include md {
+                    font-size: 38px;
+                    br {
+                        display: none;
+                    }
+                }
+                @include lg {
+                    font-size: 38px;
+                    br {
+                        display: none;
+                    }
+                }
+            }
+            .desc {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 27px;
+            }
+        }
+        @include sm {
+            flex-direction: column-reverse;
+        }
+        @include md {
+            flex-direction: column-reverse;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+.image-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .image-card {
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+            @include rmaxwd(991) {
+                flex-direction: column-reverse;
+            }
+            .image {
+                padding-right: 20px;
+                @include rmaxwd(991) {
+                    padding-left: 0;
+                }
+            }
+        }
+        &:nth-child(even) {
+            @include rmaxwd(991) {
+                flex-direction: column-reverse;
+            }
+            .image {
+                padding-left: 20px;
+                @include rmaxwd(991) {
+                    padding-left: 0;
+                }
+            }
+        }
+        .image-inner {
+            overflow: hidden;
+        }
+    }
+}
+.image-card {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+    @include sm {
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+    @include md {
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 50%;
+        @include xl {
+            gap: 32px;
+        }
+        @include sm {
+            width: 100%;
+            padding-right: 0;
+            gap: 32px;
+        }
+        @include md {
+            width: 100%;
+        }
+        @include lg {
+            width: 100%;
+            padding-right: 0;
+            gap: 28px;
+        }
+        .title {
+            position: relative;
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+            font-size: 43px;
+            line-height: 53px;
+            @include sm {
+                font-size: 32px;
+            }
+            @include md {
+                font-size: 48px;
+            }
+            @include lg {
+                font-size: 48px;
+            }
+        }
+        .desc {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 31px;
+            margin-bottom: 0;
+
+            @include sm {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        .title-wrapper {
+            .text,
+            .desc {
+              margin-bottom: 0;
+            }
+        }
+    }
+    .image-card-btn {
+        span {
+            font-family: $body-font;
+            font-size: 18px;
+            line-height: 31px;
+            font-weight: 400;
+        }
+    }
+    .image {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        .image-wrapper {
+            overflow: hidden;
+        }
+
+        @include sm {
+            width: 100%;
+            padding: 0;
+        }
+        @include md {
+            width: 100%;
+            padding: 0;
+        }
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+        }
+        .image-card-sketch {
+            animation: MoveUpDown 2s linear infinite alternate;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 79px;
+            height: 91px;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            @include rmaxwd(576) {
+                display: none;
+            }
+            &.style-two {
+                top: unset;
+                bottom: -60px;
+                left: unset;
+                right: -30px;
+                z-index: 3;
+            }
+            &.style-three {
+                position: absolute;
+                width: 188px;
+                height: 188px;
+                top: unset;
+                bottom: -87px;
+                left: -84px;
+            }
+            &.style-four {
+                top: 0;
+                right: 0;
+                left: unset;
+                bottom: unset;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+            transform: scale(1);
+            @include transition;
+        }
+    }
+    &.image-card-spacing {
+        gap: 80px;
+
+        @include rmaxwd(1199) {
+            gap: 30px;
+        }
+        .content {
+            gap: 24px;
+            .theme-btn-wrapper {
+                margin-top: 24px;
+            }
+        }
+    }
+    &.large-title {
+        .content {
+            .title-wrapper {
+                .title {
+                    font-size: 57px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    letter-spacing: 1.14px;
+                    @include rmaxwd(991) {
+                        font-size: 42px;
+                    }
+                }
+
+            }
+        }
+    }
+}

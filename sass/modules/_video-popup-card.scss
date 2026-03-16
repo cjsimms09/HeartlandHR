@@ -1,0 +1,95 @@
+.video-popup-card {
+  position: relative;
+  .video-popup-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .video-popup-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    a {
+      width: 86px;
+      height: 86px;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      background: rgba(224, 247, 128, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: ripple 3s infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include md {
+        width: 100px;
+        height: 100px;
+      }
+      @include sm {
+        width: 60px;
+        height: 60px;
+      }
+
+      i {
+        color: $icon-color;
+        font-size: 24px;
+      }
+      &:hover {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+      }
+    }
+  }
+
+  // Style Two
+  &.style-two {
+    padding: 0;
+    box-shadow: none;
+
+    .video-popup-btn {
+      a {
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        backdrop-filter: none;
+        background-image: none;
+        border: 2px solid $white;
+        i {
+          color: $white;
+        }
+        @include sm {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+  &.style-three {
+    overflow: visible;
+    padding: 0;
+    box-shadow: none;
+    .video-popup-image {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .video-popup-btn {
+      left: 0;
+
+      @include rmaxwd(1199) {
+        left: 50%;
+      }
+      a {
+        @include gradient-color-red;
+      }
+    }
+  }
+}

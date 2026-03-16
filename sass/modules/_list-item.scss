@@ -1,0 +1,108 @@
+.list-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &.style-two {
+        gap: 8px;
+    }
+
+    ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 20px;
+            line-height: 34px;
+            font-weight: 400;
+            color: $title-color;
+            margin: 0;
+            @include sm {
+                font-size: 16px;
+                line-height: 28px;
+            }
+            @include lg {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            &:before {
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+                background-color: $brand;
+                color: $icon-color;
+                font-size: 17px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                content: "\e90c";
+                font-family: $iconmoon;
+            }
+        }
+    }
+}
+.list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    .icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
+        background: $brand;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        i {
+            color: #033f47;
+            @include lg {
+                font-size: 14px;
+            }
+        }
+        @include sm {
+            width: 28px;
+            height: 28px;
+        }
+        @include lg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .text {
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: 400;
+        color: $title-color;
+        margin: 0;
+        @include sm {
+            font-size: 16px;
+            line-height: 28px;
+        }
+        @include lg {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    @include sm {
+        gap: 10px;
+    }
+    &.style-two {
+        .icon {
+            width: 24px;
+            height: 24px;
+            i {
+                font-size: 12px;
+                line-height: 7px;
+            }
+        }
+    }
+}
