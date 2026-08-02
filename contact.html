@@ -61,16 +61,50 @@
         <div class="row g-4">
           <div class="col-md-7">
             <div class="founder-card-body">
-              <h2 class="section-subtitle mb-3">Contact Us</h2>
-              <!-- JotForm embed -->
-              <iframe
-                id="jotform-hr-contact"
-                title="Contact form"
-                src="https://form.jotform.com/260746228469063"
-                style="width: 100%; min-height: 600px; border: 0;"
-                loading="lazy"
-                allow="fullscreen">
-              </iframe>
+              <h2 class="section-subtitle mb-3">Send us a message.</h2>
+              <form action="https://formsubmit.co/msimms@heartlandhr.net" method="POST">
+                <input type="hidden" name="_subject" value="New inquiry from heartlandhr.net">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://heartlandhr.net/thank-you.html">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="cf-name" class="form-label small fw-semibold">Full name</label>
+                    <input type="text" class="form-control" id="cf-name" name="Name" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="cf-business" class="form-label small fw-semibold">Business name</label>
+                    <input type="text" class="form-control" id="cf-business" name="Business">
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="cf-email" class="form-label small fw-semibold">Email</label>
+                    <input type="email" class="form-control" id="cf-email" name="Email" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="cf-phone" class="form-label small fw-semibold">Phone</label>
+                    <input type="tel" class="form-control" id="cf-phone" name="Phone">
+                  </div>
+                  <div class="col-12">
+                    <label for="cf-topic" class="form-label small fw-semibold">What do you need help with?</label>
+                    <select class="form-select" id="cf-topic" name="Topic">
+                      <option>Payroll services</option>
+                      <option>Benefits enrollment &amp; administration</option>
+                      <option>Compliant policies &amp; procedures</option>
+                      <option>Ongoing HR support</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="cf-message" class="form-label small fw-semibold">Message</label>
+                    <textarea class="form-control" id="cf-message" name="Message" rows="4" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary-hh w-100 w-sm-auto">Send message</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
 

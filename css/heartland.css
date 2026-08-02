@@ -171,11 +171,19 @@ a:hover { color: var(--heartland-orange); text-decoration: underline; }
   background: rgba(102, 204, 0, 0.08); /* soft light-green */
 }
 
-.service-icon-text {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--heartland-grey);
+.service-icon-4 {
+  background: rgba(255, 204, 0, 0.15); /* soft yellow */
 }
+
+.service-icon-circle svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--heartland-dark-green);
+}
+
+.service-icon-2 svg { stroke: var(--heartland-orange); }
+.service-icon-3 svg { stroke: var(--heartland-light-green); }
+.service-icon-4 svg { stroke: #cc9900; }
 
 /* Tighten text on small screens */
 @media (max-width: 575.98px) {
